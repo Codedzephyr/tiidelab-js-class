@@ -1,0 +1,403 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //This is my assignment
+
+      alert("Welcome to Magic Number System");
+      alert(
+        "Please Select which operation to be performed \n 1.Airtime-self \n 2.Airtime-others \n 3.Data \n 4.Transfer"
+      );
+      var amount = Number(prompt("Please enter operation to be performed"));
+
+      //airtime-self
+      if (!Number.isNaN(amount)) {
+        if (amount <= 4) {
+          if (amount == 1) {
+            console.log(amount);
+            alert("You are about to recharge your account");
+            const pin = Number(prompt("input your Pin"));
+
+            if (!Number.isNaN(pin)) {
+              var conversion = pin.toString();
+              if (conversion.length < 4) {
+                alert("Pin is too short");
+              } else if (conversion.length > 4) {
+                alert("Pin is too long");
+              } else if (conversion.length == 4) {
+                var confirmation = confirm(
+                  "are you sure you want to recharge your line"
+                );
+                if (confirmation == true) {
+                  alert("Your line has been recharged");
+                  alert("Goodday");
+                } else {
+                  alert("input the correct number");
+                }
+              }
+            } else {
+              alert("Enter a valid input");
+            }
+          }
+
+          //airtime others
+          else if (amount == 2) {
+            alert("you are about to buy airtime for another person");
+
+            alert(
+              "Please select the network \n 1.MTN \n 2.Glo \n 3.Airtel \n 4. Etisalat"
+            );
+            var InputNumber = Number(prompt("Select Network"));
+            if (InputNumber <= 4) {
+              var AirtimeNumber = prompt("Please Enter The Number");
+              if (AirtimeNumber.length == 11) {
+                const pin = Number(prompt("input your Pin"));
+
+                if (!Number.isNaN(pin)) {
+                  var conversion = pin.toString();
+                  if (conversion.length < 4) {
+                    alert("Pin is too short");
+                  } else if (conversion.length > 4) {
+                    alert("Pin is too long");
+                  } else if (conversion.length == 4) {
+                    var confirmation = confirm(
+                      `are you sure you want to recharge this line ${AirtimeNumber}`
+                    );
+                    if (confirmation == true) {
+                      alert("Your line has been recharged");
+                      alert("Goodday");
+                    } else {
+                      alert("input the correct number");
+                    }
+                  }
+                } else {
+                  alert("Enter a valid input");
+                }
+              } else if (AirtimeNumber.length < 11) {
+                alert("Number is too short");
+              } else if (AirtimeNumber.length > 11) {
+                alert("Number is too long");
+              } else {
+                alert("check your number");
+              }
+            } else if (InputNumber > 4) {
+              alert("Choose a valid option");
+            } else {
+              alert("input a number");
+            }
+          }
+
+          // Data
+          else if (amount == 3) {
+            alert("You are about to buy data");
+            alert(
+              `Select network \n 1.MTN \n 2.Glo \n 3. Airtel \n 4. Etisalat`
+            );
+            var DataInput1 = prompt("Select the right network");
+            if (DataInput1 < 5 && DataInput1 == 1) {
+              //mtn
+              alert("Data plans for mtn");
+              alert(
+                `Daily plan \n 1. N50 for 40MB \n 2. N100 for 100MB \n 3. N200 for 300MB \n 4.N300 for 1GB \n 5. N500 for 2GB`
+              );
+
+              var MtnDataInput = prompt("Select an Option ");
+              if (!Number.isNaN(MtnDataInput)) {
+                if (MtnDataInput < 6 && MtnDataInput == 1) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N50 for 40MB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N50 for 40MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 2) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N100 for 100MB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N100 for 100MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 3) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N200 for 300MB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N200 for 300MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 4) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N500 for 4GB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N500 for 4GB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 5) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N50 for 40MB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N50 for 40MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                }
+              } else {
+                alert("Input a valid option/number");
+              }
+            } else if (DataInput1 < 5 && DataInput1 == 2) {
+              alert("Data plans for Glo");
+              alert(
+                `Daily plan \n 1. N50 for 40MB \n 2. N100 for 100MB \n 3. N200 for 300MB \n 4.N300 for 1GB \n 5. N500 for 2GB`
+              );
+
+              var MtnDataInput = prompt("Select an Option ");
+              if (!Number.isNaN(MtnDataInput)) {
+                if (MtnDataInput < 6 && MtnDataInput == 1) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N50 for 40MB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N50 for 40MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 2) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N100 for 100MB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N100 for 100MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 3) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N200 for 300MB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N200 for 300MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 4) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N300 for 1GB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N300 for 1GB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 5) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N500 for 4GB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N50 for 40MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                }
+              } else {
+                alert("Input a valid option/number");
+              }
+            } else if (DataInput1 < 5 && DataInput1 == 3) {
+              alert("Data plans for Airtel");
+              alert(
+                `Daily plan \n 1. N50 for 40MB \n 2. N100 for 100MB \n 3. N200 for 300MB \n 4.N300 for 1GB \n 5. N500 for 2GB`
+              );
+
+              var MtnDataInput = prompt("Select an Option ");
+              if (!Number.isNaN(MtnDataInput)) {
+                if (MtnDataInput < 6 && MtnDataInput == 1) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N50 for 40MB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N50 for 40MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 2) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N100 for 100MB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N100 for 100MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 3) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N200 for 300MB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N200 for 300MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 4) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N300 for 1GB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N300 for 1GB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 5) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N500 for 4GB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N500 for 4GB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                }
+              } else {
+                alert("Input a valid option/number");
+              }
+            } else if (DataInput1 < 5 && DataInput1 == 4) {
+              alert("Data plans for Etisalat");
+              alert(
+                `Daily plan \n 1. N50 for 40MB \n 2. N100 for 100MB \n 3. N200 for 300MB \n 4.N300 for 1GB \n 5. N500 for 2GB`
+              );
+
+              var MtnDataInput = prompt("Select an Option ");
+              if (!Number.isNaN(MtnDataInput)) {
+                if (MtnDataInput < 6 && MtnDataInput == 1) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N50 for 40MB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N50 for 40MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 2) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N100 for 100MB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N100 for 100MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 3) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N200 for 300MB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N200 for 300MB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 4) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N300 for 1GB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N300 for 1GB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                } else if (MtnDataInput < 6 && MtnDataInput == 5) {
+                  var confirmationData = confirm(
+                    "Are sure you want to do N500 for 4GB?"
+                  );
+                  if (confirmationData == true) {
+                    alert(
+                      "The data plan N500 for 4GB has been awarded on this line"
+                    );
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
+                }
+              } else {
+                alert("Input a valid option/number");
+              }
+            } else {
+              alert("you made the wrong option");
+            }
+          }
+        } else if (amount > 4) {
+          alert("Transferred");
+        }
+      } else {
+        alert("Input a valid number");
+      }
+    </script>
+  </body>
+</html>
