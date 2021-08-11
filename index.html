@@ -8,6 +8,7 @@
   <body>
     <script>
       //This is my assignment
+      // Forgive the length
 
       alert("Welcome to Magic Number System");
       alert(
@@ -34,10 +35,15 @@
                   "are you sure you want to recharge your line"
                 );
                 if (confirmation == true) {
-                  alert("Your line has been recharged");
-                  alert("Goodday");
+                  const amount = Number(prompt("input the amount"));
+                  if (!Number.isNaN(amount)) {
+                    alert(`Your line has been recharged with ${amount} naira`);
+                    alert("Goodday");
+                  } else {
+                    alert("input the correct number");
+                  }
                 } else {
-                  alert("input the correct number");
+                  alert("Input a valid amount");
                 }
               }
             } else {
@@ -69,10 +75,17 @@
                       `are you sure you want to recharge this line ${AirtimeNumber}`
                     );
                     if (confirmation == true) {
-                      alert("Your line has been recharged");
-                      alert("Goodday");
+                      var amount1 = Number(prompt("input the amount"));
+                      if (!Number.isNaN(amount1)) {
+                        alert(
+                          `The line ${AirtimeNumber} has been recharged with ${amount1} naira`
+                        );
+                        alert("Goodday");
+                      } else {
+                        alert("input the correct number");
+                      }
                     } else {
-                      alert("input the correct number");
+                      alert("input a valid phone number");
                     }
                   }
                 } else {
@@ -391,9 +404,40 @@
             } else {
               alert("you made the wrong option");
             }
+          } else if (amount == 4) {
+            alert(
+              `Select account \n 1. Current \n 2. Savings \n 3. Fixed Deposit`
+            );
+
+            var AccountSelect = Number(prompt("Select Accoount"));
+            if (!Number.isNaN(AccountSelect)) {
+              if (AccountSelect <= 3) {
+                alert("Input Account number to transfer to");
+                var AccountInput = prompt("Input Account Number");
+                if (AccountInput.length < 10) {
+                  alert("This Account number is less than 10");
+                } else if (AccountInput.length > 10) {
+                  alert("This account number is greater than 10");
+                } else if (AccountInput.length == 10) {
+                  alert(
+                    `Select Amount to transfer \n 1. 500 \n 2. 1000 \n 3. 5000 \n 4. 10000 \n 5.20000 \n 6. others`
+                  );
+                  var AmountInput = prompt("Select Amount");
+                  if (AmountInput <= 7) {
+                    alert("Transfer successful");
+                  } else {
+                    alert("Select the right input");
+                  }
+                }
+              } else {
+                alert("choose the right option");
+              }
+            } else {
+              alert("Choose the right option");
+            }
           }
-        } else if (amount > 4) {
-          alert("Transferred");
+        } else {
+          alert("choose valid option");
         }
       } else {
         alert("Input a valid number");
